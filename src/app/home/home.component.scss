@@ -1,44 +1,79 @@
+body {
+  background-color: #fffff0;
+}
 .container {
-    background: linear-gradient(rgb(240, 165, 2), rgb(36, 36, 73));
-  }
-  .search-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .intro-section {
-    padding: 10px;
-    text-align: left;
-    color: white;
-  }
-  .product-category {
-    width: 200px;
-    margin-bottom: 10px;
-  }
-  .search-input {
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    margin-right: 10px;
-    border-color: beige;
-    color: white;
-    margin-bottom: 10px;
-  }
-  .form-control {
-    background-color: transparent;
-    color: rgb(0, 28, 23);
-  }
-  .form-control::placeholder {
-    color: rgba(241, 22, 182, 0.5);
-    opacity: 1;
-  }
-  .form-control::ms-input-placeholder {
-    color: rgba(241, 22, 182, 0.5);
-    opacity: 1;
-  }
-  .product-item {
-    background-color: rgb(19, 23, 42);
-    border: 1px solid rgb(35, 39, 61);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+  background: linear-gradient(rgb(36, 36, 65), rgb(36, 36, 73));
+}
+.intro-section {
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: white;
+}
+.product-category {
+  width: 200px;
+  margin-bottom: 10px;
+  color: white;
+}
+.search-input {
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 10px;
+  border-color: beige;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+.form-control::placeholder {
+  color: rgb(2, 0, 1);
+  opacity: 1;
+}
+.form-control::ms-input-placeholder {
+  color: rgb(247, 242, 245);
+  opacity: 1;
+}
+.product-item {
+  background-color: rgb(19, 23, 42);
+  border: 1px solid rgb(35, 39, 61);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.product-name {
+  color: white;
+}
+.product-description {
+  color: white;
+}
+.product-warranty {
+  color: rgb(242, 126, 212);
+}
+.product-price {
+  color: white;
+}
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.product-rating {
+  color: #ffd700;
+  margin-top: 10px;
+}
+.product-actions {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+.space-x {
+  margin: 0 5px;
+}

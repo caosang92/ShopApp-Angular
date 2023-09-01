@@ -1,0 +1,78 @@
+body {
+  background-color: #fcfcd8;
+}
+.container {
+  background: linear-gradient(rgb(36, 36, 65), rgb(36, 36, 73));
+}
+.intro-section {
+  color: #fffacd;
+  padding: 20px;
+  text-align: center;
+}
+.product-header {
+  color: #fff0f5;
+  font-size: 15pt;
+}
+.form-control {
+  background-color: #fff0f5;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(12, 0, 0);
+}
+.form-control:focus {
+  border-color: rgb(255, 255, 255);
+  background-color: #fff0f5;
+}
+.form-label {
+  color: #fff0f5;
+}
+
+.product-order {
+  color: RGB(105, 244, 181);
+  font-size: 15pt;
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  border-collapse: separate;
+  border: 1px solid white;
+  border-spacing: 0;
+  background-color: rgb(12, 13, 54);
+}
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  color: #fff0f5;
+}
+.product-info {
+  display: flex;
+  align-items: center;
+}
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.product-name {
+  color: white;
+  margin-right: 10px;
+}
+
+.header-text {
+  color: #fcfcd8;
+}
+.space-x {
+  margin: 0 5px;
+}
+.form-control .btn {
+  margin-bottom: 30px;
+}
+.btn-gradient {
+  background: linear-gradient(to right, rgb(225, 64, 180), rgb(126, 43, 237));
+  color: white;
+  border-radius: 30px;
+  width: 200px;
+}

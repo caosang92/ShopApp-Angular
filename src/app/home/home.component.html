@@ -1,403 +1,237 @@
-<style>
-  .container {
-    background: linear-gradient(rgb(240, 165, 2), rgb(36, 36, 73));
-  }
-  .search-box {
-    display: flex;
-    align-items: right;
-    justify-content: right;
-  }
-  .intro-section {
-    padding: 10px;
-    text-align: left;
-    color: white;
-  }
-  .product-category {
-    width: 200px;
-    margin-bottom: 10px;
-  }
-  .search-input {
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    margin-right: 10px;
-    border-color: beige;
-    color: white;
-    margin-bottom: 10px;
-  }
-  .form-control {
-    background-color: transparent;
-    color: rgb(0, 28, 23);
-  }
-  .form-control::placeholder {
-    color: rgba(241, 22, 182, 0.5);
-    opacity: 1;
-  }
-  .form-control::ms-input-placeholder {
-    color: rgba(241, 22, 182, 0.5);
-    opacity: 1;
-  }
-  .product-item {
-    background-color: rgb(19, 23, 42);
-    border: 1px solid rgb(35, 39, 61);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .product-name {
-    color: white;
-  }
-  .product-description {
-    color: rgb(173, 178, 203);
-  }
-  .product-warranty {
-    color: rgb(242, 126, 212);
-  }
-  .product-price {
-    color: white;
-  }
-  .product-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .product-rating {
-    color: #ffd700;
-    margin-top: 10px;
-  }
-  .product-actions {
-    display: flex;
-    justify-content: right;
-    margin-top: 20px;
-  }
-  .space-x {
-    margin: 0 5px;
-  }
-</style>
-<header>
-  <style>
-    .navbar .container-2 .navbar-brand {
-      color: rgb(173, 178, 203) !important;
-    }
-    .navbar .container-2 .navbar-nav .nav-link {
-      color: rgb(173, 178, 203) !important;
-      border-radius: 18px;
-      padding: 8px 16px;
-    }
-    .navbar .container-2 .navbar-nav .nav-link.active {
-      background-color: rgb(127, 68, 255) !important;
-      color: white !important;
-    }
-  </style>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-2">
-      <a class="navbar-brand" href="#">Shoppee</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Thông báo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Đăng nhập</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
-<div class="container">
-  <div class="intro-section">
-    <h1>Đây là trang web Con bò</h1>
-    <p>Trang này hiển thị danh sách các sản phẩm, kèm ảnh</p>
-    <p>Các bạn có thể chọn xem sản phẩm và mua hàng tại đây</p>
-  </div>
-  <!-- Đoạn này có 1 ô searchbox bên trái, 1 combobox bên phải --!>
-    <button class="btn btn-success">Click here</button> -->
-  <div class="search-box">
-    <select class="form-control product-category">
-      <option selected disabled>Danh mục sản phẩm</option>
-      <option>Đồ điện tử</option>
-      <option>Thời trang</option>
-      <option>Đồ dùng gia đình</option>
-    </select>
-    <input
-      type="text"
-      class="form-control search-input"
-      placeholder="Tìm sản phẩm"
-    />
-  </div>
-  <div class="row">
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <div class="product-item">
-        <img
-          src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
-          alt="Product Image"
-          class="product-image"
-        />
-        <h3 class="product-name">Macbook</h3>
-        <p class="product-description">
-          アップル Apple MacBook Air 13インチ Apple
-          M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
-          [MGN63J/A]
-        </p>
-        <p class="product-warranty">保証期間: 12カ月</p>
-        <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-          <span class="space-x"></span>
-          <button class="btn btn-success">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>
-  <!-- Footer content goes here -->
+<app-header></app-header>
+<body>
   <div class="container">
-    <div class="row product-description">
-      <div class="col-md-6">
-        <p>&copy; Copyright 2023. All rights reserved</p>
+    <div class="intro-section">
+      <h1>Đây là trang web Con bò</h1>
+      <p>Trang này hiển thị danh sách các sản phẩm, kèm ảnh</p>
+      <p>Các bạn có thể chọn xem sản phẩm và mua hàng tại đây</p>
+    </div>
+    <!-- Đoạn này có 1 ô searchbox bên trái, 1 combobox bên phải --!>
+    <button class="btn btn-success">Click here</button> -->
+    <div class="search-box">
+      <select class="form-control product-category">
+        <option selected disabled>Danh mục sản phẩm</option>
+        <option>Đồ điện tử</option>
+        <option>Thời trang</option>
+        <option>Đồ dùng gia đình</option>
+      </select>
+      <input
+        type="text"
+        class="form-control search-input"
+        placeholder="Tìm sản phẩm"
+      />
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <p class="tex-end">Terms of Service | Privacy Policy</p>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+          <img
+            src="https://www.digitaltrends.com/wp-content/uploads/2021/10/surface-pro-8-10.jpg?p=1"
+            alt="Product Image"
+            class="product-image"
+          />
+          <h3 class="product-name">Macbook</h3>
+          <p class="product-description">
+            アップル Apple MacBook Air 13インチ Apple
+            M1チップ（8コアCPU/7コアGPU）/SSD 256GB/メモリ 8GB スペースグレイ
+            [MGN63J/A]
+          </p>
+          <p class="product-warranty">保証期間: 12カ月</p>
+          <p class="product-price">Price: <del>175,000円</del> 152,000円</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <span class="space-x"></span>
+            <button class="btn btn-success">Mua ngay</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
+</body>
+<app-footer></app-footer>

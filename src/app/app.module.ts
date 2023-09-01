@@ -21,7 +21,7 @@ import { OrderConfirmComponent } from './order-confirm/order-confirm.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [OrderComponent]
+  bootstrap: [OrderConfirmComponent]
 })
 
 //HomeComponent
